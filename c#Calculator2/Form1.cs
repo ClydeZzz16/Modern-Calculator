@@ -32,19 +32,38 @@ namespace c_Calculator2
 
         private void button4_Click(object sender, EventArgs e)
         {
-            option = "+";
-            num1 = double.Parse(textDisplay.Text);
-            //textDisplay.Text = textDisplay.Text + bPlus.Text;
+                try
+                {
+                    option = "+";
+                    num1 = double.Parse(textDisplay.Text);
+                    //textDisplay.Text = textDisplay.Text + bPlus.Text;
 
-            textDisplay.Clear();
+                    textDisplay.Clear();
+                }
+                catch (FormatException ex)
+                {
+                    MessageBox.Show("You cannot input two operators!", "Input Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    textDisplay.Clear();
+                }
+
+
         }
 
         private void button7_Click(object sender, EventArgs e)
         {
-            option = "*";
-            num1 = double.Parse(textDisplay.Text);
+            try
+            {
+                option = "*";
+                num1 = double.Parse(textDisplay.Text);
+                //textDisplay.Text = textDisplay.Text + bPlus.Text;
 
-            textDisplay.Clear();
+                textDisplay.Clear();
+            }
+            catch (FormatException ex)
+            {
+                MessageBox.Show("You cannot input two operators!", "Input Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                textDisplay.Clear();
+            }
         }
 
         private void button14_Click(object sender, EventArgs e)
@@ -84,7 +103,11 @@ namespace c_Calculator2
 
         private void bDecimal_Click(object sender, EventArgs e)
         {
-            textDisplay.Text = textDisplay.Text + bDecimal.Text;
+            if (!textDisplay.Text.Contains("."))
+            {
+                textDisplay.Text += bDecimal.Text;
+            }
+            //textDisplay.Text = textDisplay.Text + bDecimal.Text;
         }
 
         private void bClear_Click(object sender, EventArgs e)
@@ -97,34 +120,70 @@ namespace c_Calculator2
 
         private void bMinus_Click(object sender, EventArgs e)
         {
-            option = "-";
-            num1 = double.Parse(textDisplay.Text);
+            try
+            {
+                option = "-";
+                num1 = double.Parse(textDisplay.Text);
+                //textDisplay.Text = textDisplay.Text + bPlus.Text;
 
-            textDisplay.Clear();
+                textDisplay.Clear();
+            }
+            catch (FormatException ex)
+            {
+                MessageBox.Show("You cannot input two operators!", "Input Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                textDisplay.Clear();
+            }
         }
 
         private void bDivide_Click(object sender, EventArgs e)
         {
-            option = "/";
-            num1 = double.Parse(textDisplay.Text);
+            try
+            {
+                option = "/";
+                num1 = double.Parse(textDisplay.Text);
+                //textDisplay.Text = textDisplay.Text + bPlus.Text;
 
-            textDisplay.Clear();
+                textDisplay.Clear();
+            }
+            catch (FormatException ex)
+            {
+                MessageBox.Show("You cannot input two operators!", "Input Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                textDisplay.Clear();
+            }
         }
 
         private void bModulo_Click(object sender, EventArgs e)
         {
-            option = "%";
-            num1 = double.Parse(textDisplay.Text);
+            try
+            {
+                option = "%";
+                num1 = double.Parse(textDisplay.Text);
+                //textDisplay.Text = textDisplay.Text + bPlus.Text;
 
-            textDisplay.Clear();
+                textDisplay.Clear();
+            }
+            catch (FormatException ex)
+            {
+                MessageBox.Show("You cannot input two operators!", "Input Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                textDisplay.Clear();
+            }
         }
 
         private void bPower_Click(object sender, EventArgs e)
         {
-            option = "^";
-            num1 = double.Parse(textDisplay.Text);
+            try
+            {
+                option = "^";
+                num1 = double.Parse(textDisplay.Text);
+                //textDisplay.Text = textDisplay.Text + bPlus.Text;
 
-            textDisplay.Clear();
+                textDisplay.Clear();
+            }
+            catch (FormatException ex)
+            {
+                MessageBox.Show("You cannot input two operators!", "Input Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                textDisplay.Clear();
+            }
         }
 
         private void bEqual_Click(object sender, EventArgs e)
