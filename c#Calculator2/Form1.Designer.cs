@@ -349,6 +349,7 @@
             Controls.Add(b2);
             Controls.Add(b1);
             Controls.Add(textDisplay);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "Form1";
             StartPosition = FormStartPosition.CenterScreen;
