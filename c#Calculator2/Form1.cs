@@ -1,3 +1,5 @@
+using System.Drawing.Text;
+
 namespace c_Calculator2
 {
     public partial class Form1 : Form
@@ -12,12 +14,11 @@ namespace c_Calculator2
         double num2;
         String option;
         double result;
-
+        bool isResultDisplayed;
 
         private void button1_Click(object sender, EventArgs e)
         {
             textDisplay.Text = textDisplay.Text + b1.Text;
-
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -32,36 +33,44 @@ namespace c_Calculator2
 
         private void button4_Click(object sender, EventArgs e)
         {
-                try
+            try
+            {
+                if (isResultDisplayed)
                 {
-                    option = "+";
+                    num1 = result;
+                    isResultDisplayed = false;
+                }
+                else
+                {
                     num1 = double.Parse(textDisplay.Text);
-                    //textDisplay.Text = textDisplay.Text + bPlus.Text;
-
-                    textDisplay.Clear();
                 }
-                catch (FormatException ex)
-                {
-                    MessageBox.Show("You cannot input two operators!", "Input Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    textDisplay.Clear();
-                }
-
-
+                option = "+";
+                textDisplay.Clear();
+            }
+            catch (FormatException ex)
+            {
+                textDisplay.Clear();
+            }
         }
 
         private void button7_Click(object sender, EventArgs e)
         {
             try
             {
+                if (isResultDisplayed)
+                {
+                    num1 = result;
+                    isResultDisplayed = false;
+                }
+                else
+                {
+                    num1 = double.Parse(textDisplay.Text);
+                }
                 option = "*";
-                num1 = double.Parse(textDisplay.Text);
-                //textDisplay.Text = textDisplay.Text + bPlus.Text;
-
                 textDisplay.Clear();
             }
             catch (FormatException ex)
             {
-                MessageBox.Show("You cannot input two operators!", "Input Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 textDisplay.Clear();
             }
         }
@@ -107,7 +116,6 @@ namespace c_Calculator2
             {
                 textDisplay.Text += bDecimal.Text;
             }
-            //textDisplay.Text = textDisplay.Text + bDecimal.Text;
         }
 
         private void bClear_Click(object sender, EventArgs e)
@@ -116,21 +124,27 @@ namespace c_Calculator2
             num1 = 0;
             num2 = 0;
             result = 0;
+            isResultDisplayed = false;
         }
 
         private void bMinus_Click(object sender, EventArgs e)
         {
             try
             {
+                if (isResultDisplayed)
+                {
+                    num1 = result;
+                    isResultDisplayed = false;
+                }
+                else
+                {
+                    num1 = double.Parse(textDisplay.Text);
+                }
                 option = "-";
-                num1 = double.Parse(textDisplay.Text);
-                //textDisplay.Text = textDisplay.Text + bPlus.Text;
-
                 textDisplay.Clear();
             }
             catch (FormatException ex)
             {
-                MessageBox.Show("You cannot input two operators!", "Input Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 textDisplay.Clear();
             }
         }
@@ -139,15 +153,20 @@ namespace c_Calculator2
         {
             try
             {
+                if (isResultDisplayed)
+                {
+                    num1 = result;
+                    isResultDisplayed = false;
+                }
+                else
+                {
+                    num1 = double.Parse(textDisplay.Text);
+                }
                 option = "/";
-                num1 = double.Parse(textDisplay.Text);
-                //textDisplay.Text = textDisplay.Text + bPlus.Text;
-
                 textDisplay.Clear();
             }
             catch (FormatException ex)
             {
-                MessageBox.Show("You cannot input two operators!", "Input Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 textDisplay.Clear();
             }
         }
@@ -156,15 +175,20 @@ namespace c_Calculator2
         {
             try
             {
+                if (isResultDisplayed)
+                {
+                    num1 = result;
+                    isResultDisplayed = false;
+                }
+                else
+                {
+                    num1 = double.Parse(textDisplay.Text);
+                }
                 option = "%";
-                num1 = double.Parse(textDisplay.Text);
-                //textDisplay.Text = textDisplay.Text + bPlus.Text;
-
                 textDisplay.Clear();
             }
             catch (FormatException ex)
             {
-                MessageBox.Show("You cannot input two operators!", "Input Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 textDisplay.Clear();
             }
         }
@@ -173,15 +197,20 @@ namespace c_Calculator2
         {
             try
             {
+                if (isResultDisplayed)
+                {
+                    num1 = result;
+                    isResultDisplayed = false;
+                }
+                else
+                {
+                    num1 = double.Parse(textDisplay.Text);
+                }
                 option = "^";
-                num1 = double.Parse(textDisplay.Text);
-                //textDisplay.Text = textDisplay.Text + bPlus.Text;
-
                 textDisplay.Clear();
             }
             catch (FormatException ex)
             {
-                MessageBox.Show("You cannot input two operators!", "Input Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 textDisplay.Clear();
             }
         }
@@ -220,11 +249,50 @@ namespace c_Calculator2
                     break;
             }
             textDisplay.Text = result + "";
+            isResultDisplayed = true;
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void Form1_Load_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Form1_KeyDown(object sender, KeyEventArgs e)
+        {
+            switch (e.KeyCode)
+            {
+                case Keys.Back: bClear_Click(this, EventArgs.Empty); e.SuppressKeyPress = true; break;
+                case Keys.Add: button4_Click(this, EventArgs.Empty); e.SuppressKeyPress = true; break;
+                case Keys.Subtract: bMinus_Click(this, EventArgs.Empty); e.SuppressKeyPress = true; break;
+                case Keys.Multiply: button7_Click(this, EventArgs.Empty); e.SuppressKeyPress = true; break;
+                case Keys.Divide: bDivide_Click(this, EventArgs.Empty); e.SuppressKeyPress = true; break;
+                case Keys.Oem5: bModulo_Click(this, EventArgs.Empty); e.SuppressKeyPress = true; break;
+                case Keys.Oem6: bPower_Click(this, EventArgs.Empty); e.SuppressKeyPress = true; break;
+                case Keys.Enter: bEqual_Click(this, EventArgs.Empty); e.SuppressKeyPress = true; break;
+                default: break;
+            }
+        }
+
+        private void Form1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (isResultDisplayed)
+            {
+                textDisplay.Clear();
+                isResultDisplayed = false;
+            }
+            char[] allowKeys = { '1', '2', '3', '4', '5', '6', '7', '8', '9', '0', '.' };
+            if (allowKeys.Contains(e.KeyChar))
+            {
+                textDisplay.Text += e.KeyChar.ToString();
+                e.Handled = true;
+            }
+            else
+                e.Handled = true;
         }
     }
 }

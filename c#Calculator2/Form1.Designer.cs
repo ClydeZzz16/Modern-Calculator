@@ -53,25 +53,27 @@
             // 
             // textDisplay
             // 
-            textDisplay.BackColor = Color.FromArgb(58, 63, 119);
+            textDisplay.BackColor = Color.FromArgb(82, 56, 116);
             textDisplay.BorderStyle = BorderStyle.None;
             textDisplay.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
             textDisplay.ForeColor = Color.White;
-            textDisplay.Location = new Point(9, 30);
+            textDisplay.Location = new Point(8, 22);
+            textDisplay.Margin = new Padding(3, 2, 3, 2);
             textDisplay.Name = "textDisplay";
-            textDisplay.Size = new Size(352, 40);
+            textDisplay.Size = new Size(308, 32);
             textDisplay.TabIndex = 0;
             textDisplay.UseWaitCursor = true;
             // 
             // b1
             // 
-            b1.BackColor = Color.FromArgb(64, 66, 88);
+            b1.BackColor = Color.FromArgb(199, 251, 165);
             b1.FlatStyle = FlatStyle.Popup;
             b1.Font = new Font("Microsoft Sans Serif", 7.8F, FontStyle.Bold);
-            b1.ForeColor = SystemColors.ButtonHighlight;
-            b1.Location = new Point(12, 111);
+            b1.ForeColor = SystemColors.ActiveCaptionText;
+            b1.Location = new Point(10, 83);
+            b1.Margin = new Padding(3, 2, 3, 2);
             b1.Name = "b1";
-            b1.Size = new Size(63, 57);
+            b1.Size = new Size(55, 43);
             b1.TabIndex = 1;
             b1.Text = "1";
             b1.UseVisualStyleBackColor = false;
@@ -79,13 +81,14 @@
             // 
             // b2
             // 
-            b2.BackColor = Color.FromArgb(64, 66, 88);
+            b2.BackColor = Color.FromArgb(199, 251, 165);
             b2.FlatStyle = FlatStyle.Popup;
             b2.Font = new Font("Microsoft Sans Serif", 7.8F, FontStyle.Bold);
-            b2.ForeColor = SystemColors.ButtonHighlight;
-            b2.Location = new Point(83, 111);
+            b2.ForeColor = SystemColors.ActiveCaptionText;
+            b2.Location = new Point(73, 83);
+            b2.Margin = new Padding(3, 2, 3, 2);
             b2.Name = "b2";
-            b2.Size = new Size(63, 57);
+            b2.Size = new Size(55, 43);
             b2.TabIndex = 2;
             b2.Text = "2";
             b2.UseVisualStyleBackColor = false;
@@ -93,13 +96,14 @@
             // 
             // b3
             // 
-            b3.BackColor = Color.FromArgb(64, 66, 88);
+            b3.BackColor = Color.FromArgb(199, 251, 165);
             b3.FlatStyle = FlatStyle.Popup;
             b3.Font = new Font("Microsoft Sans Serif", 7.8F, FontStyle.Bold);
-            b3.ForeColor = SystemColors.ButtonHighlight;
-            b3.Location = new Point(154, 111);
+            b3.ForeColor = SystemColors.ActiveCaptionText;
+            b3.Location = new Point(135, 83);
+            b3.Margin = new Padding(3, 2, 3, 2);
             b3.Name = "b3";
-            b3.Size = new Size(63, 57);
+            b3.Size = new Size(55, 43);
             b3.TabIndex = 3;
             b3.Text = "3";
             b3.UseVisualStyleBackColor = false;
@@ -110,9 +114,10 @@
             bPlus.BackColor = Color.FromArgb(244, 157, 26);
             bPlus.FlatStyle = FlatStyle.Popup;
             bPlus.Font = new Font("Microsoft Sans Serif", 7.8F, FontStyle.Bold);
-            bPlus.Location = new Point(225, 111);
+            bPlus.Location = new Point(197, 83);
+            bPlus.Margin = new Padding(3, 2, 3, 2);
             bPlus.Name = "bPlus";
-            bPlus.Size = new Size(63, 57);
+            bPlus.Size = new Size(55, 43);
             bPlus.TabIndex = 4;
             bPlus.Text = "+";
             bPlus.UseVisualStyleBackColor = false;
@@ -123,9 +128,10 @@
             bMinus.BackColor = Color.FromArgb(244, 157, 26);
             bMinus.FlatStyle = FlatStyle.Popup;
             bMinus.Font = new Font("Microsoft Sans Serif", 7.8F, FontStyle.Bold);
-            bMinus.Location = new Point(296, 111);
+            bMinus.Location = new Point(259, 83);
+            bMinus.Margin = new Padding(3, 2, 3, 2);
             bMinus.Name = "bMinus";
-            bMinus.Size = new Size(63, 57);
+            bMinus.Size = new Size(55, 43);
             bMinus.TabIndex = 5;
             bMinus.Text = "-";
             bMinus.UseVisualStyleBackColor = false;
@@ -136,9 +142,10 @@
             bDivide.BackColor = Color.FromArgb(244, 157, 26);
             bDivide.FlatStyle = FlatStyle.Popup;
             bDivide.Font = new Font("Microsoft Sans Serif", 7.8F, FontStyle.Bold);
-            bDivide.Location = new Point(296, 197);
+            bDivide.Location = new Point(259, 148);
+            bDivide.Margin = new Padding(3, 2, 3, 2);
             bDivide.Name = "bDivide";
-            bDivide.Size = new Size(63, 57);
+            bDivide.Size = new Size(55, 43);
             bDivide.TabIndex = 10;
             bDivide.Text = "/";
             bDivide.UseVisualStyleBackColor = false;
@@ -149,9 +156,10 @@
             bTimes.BackColor = Color.FromArgb(244, 157, 26);
             bTimes.FlatStyle = FlatStyle.Popup;
             bTimes.Font = new Font("Microsoft Sans Serif", 7.8F, FontStyle.Bold);
-            bTimes.Location = new Point(223, 197);
+            bTimes.Location = new Point(195, 148);
+            bTimes.Margin = new Padding(3, 2, 3, 2);
             bTimes.Name = "bTimes";
-            bTimes.Size = new Size(65, 57);
+            bTimes.Size = new Size(57, 43);
             bTimes.TabIndex = 9;
             bTimes.Text = "X";
             bTimes.UseVisualStyleBackColor = false;
@@ -159,13 +167,14 @@
             // 
             // b6
             // 
-            b6.BackColor = Color.FromArgb(64, 66, 88);
+            b6.BackColor = Color.FromArgb(199, 251, 165);
             b6.FlatStyle = FlatStyle.Popup;
             b6.Font = new Font("Microsoft Sans Serif", 7.8F, FontStyle.Bold);
-            b6.ForeColor = SystemColors.ButtonHighlight;
-            b6.Location = new Point(152, 197);
+            b6.ForeColor = SystemColors.ActiveCaptionText;
+            b6.Location = new Point(133, 148);
+            b6.Margin = new Padding(3, 2, 3, 2);
             b6.Name = "b6";
-            b6.Size = new Size(65, 57);
+            b6.Size = new Size(57, 43);
             b6.TabIndex = 8;
             b6.Text = "6";
             b6.UseVisualStyleBackColor = false;
@@ -173,13 +182,14 @@
             // 
             // b5
             // 
-            b5.BackColor = Color.FromArgb(64, 66, 88);
+            b5.BackColor = Color.FromArgb(199, 251, 165);
             b5.FlatStyle = FlatStyle.Popup;
             b5.Font = new Font("Microsoft Sans Serif", 7.8F, FontStyle.Bold);
-            b5.ForeColor = SystemColors.ButtonHighlight;
-            b5.Location = new Point(83, 197);
+            b5.ForeColor = SystemColors.ActiveCaptionText;
+            b5.Location = new Point(73, 148);
+            b5.Margin = new Padding(3, 2, 3, 2);
             b5.Name = "b5";
-            b5.Size = new Size(63, 57);
+            b5.Size = new Size(55, 43);
             b5.TabIndex = 7;
             b5.Text = "5";
             b5.UseVisualStyleBackColor = false;
@@ -187,13 +197,14 @@
             // 
             // b4
             // 
-            b4.BackColor = Color.FromArgb(64, 66, 88);
+            b4.BackColor = Color.FromArgb(199, 251, 165);
             b4.FlatStyle = FlatStyle.Popup;
             b4.Font = new Font("Microsoft Sans Serif", 7.8F, FontStyle.Bold);
-            b4.ForeColor = SystemColors.ButtonHighlight;
-            b4.Location = new Point(12, 197);
+            b4.ForeColor = SystemColors.ActiveCaptionText;
+            b4.Location = new Point(10, 148);
+            b4.Margin = new Padding(3, 2, 3, 2);
             b4.Name = "b4";
-            b4.Size = new Size(63, 57);
+            b4.Size = new Size(55, 43);
             b4.TabIndex = 6;
             b4.Text = "4";
             b4.UseVisualStyleBackColor = false;
@@ -204,9 +215,10 @@
             bPower.BackColor = Color.FromArgb(244, 157, 26);
             bPower.FlatStyle = FlatStyle.Popup;
             bPower.Font = new Font("Microsoft Sans Serif", 7.8F, FontStyle.Bold);
-            bPower.Location = new Point(296, 283);
+            bPower.Location = new Point(259, 212);
+            bPower.Margin = new Padding(3, 2, 3, 2);
             bPower.Name = "bPower";
-            bPower.Size = new Size(63, 57);
+            bPower.Size = new Size(55, 43);
             bPower.TabIndex = 15;
             bPower.Text = "^";
             bPower.UseVisualStyleBackColor = false;
@@ -217,9 +229,10 @@
             bModulo.BackColor = Color.FromArgb(244, 157, 26);
             bModulo.FlatStyle = FlatStyle.Popup;
             bModulo.Font = new Font("Microsoft Sans Serif", 7.8F, FontStyle.Bold);
-            bModulo.Location = new Point(223, 283);
+            bModulo.Location = new Point(195, 212);
+            bModulo.Margin = new Padding(3, 2, 3, 2);
             bModulo.Name = "bModulo";
-            bModulo.Size = new Size(65, 57);
+            bModulo.Size = new Size(57, 43);
             bModulo.TabIndex = 14;
             bModulo.Text = "%";
             bModulo.UseVisualStyleBackColor = false;
@@ -227,13 +240,14 @@
             // 
             // b9
             // 
-            b9.BackColor = Color.FromArgb(64, 66, 88);
+            b9.BackColor = Color.FromArgb(199, 251, 165);
             b9.FlatStyle = FlatStyle.Popup;
             b9.Font = new Font("Microsoft Sans Serif", 7.8F, FontStyle.Bold);
-            b9.ForeColor = SystemColors.ButtonHighlight;
-            b9.Location = new Point(154, 283);
+            b9.ForeColor = SystemColors.ActiveCaptionText;
+            b9.Location = new Point(135, 212);
+            b9.Margin = new Padding(3, 2, 3, 2);
             b9.Name = "b9";
-            b9.Size = new Size(63, 57);
+            b9.Size = new Size(55, 43);
             b9.TabIndex = 13;
             b9.Text = "9";
             b9.UseVisualStyleBackColor = false;
@@ -241,13 +255,14 @@
             // 
             // b8
             // 
-            b8.BackColor = Color.FromArgb(64, 66, 88);
+            b8.BackColor = Color.FromArgb(199, 251, 165);
             b8.FlatStyle = FlatStyle.Popup;
             b8.Font = new Font("Microsoft Sans Serif", 7.8F, FontStyle.Bold);
-            b8.ForeColor = SystemColors.ButtonHighlight;
-            b8.Location = new Point(83, 283);
+            b8.ForeColor = SystemColors.ActiveCaptionText;
+            b8.Location = new Point(73, 212);
+            b8.Margin = new Padding(3, 2, 3, 2);
             b8.Name = "b8";
-            b8.Size = new Size(63, 57);
+            b8.Size = new Size(55, 43);
             b8.TabIndex = 12;
             b8.Text = "8";
             b8.UseVisualStyleBackColor = false;
@@ -255,13 +270,14 @@
             // 
             // b7
             // 
-            b7.BackColor = Color.FromArgb(64, 66, 88);
+            b7.BackColor = Color.FromArgb(199, 251, 165);
             b7.FlatStyle = FlatStyle.Popup;
             b7.Font = new Font("Microsoft Sans Serif", 7.8F, FontStyle.Bold);
-            b7.ForeColor = SystemColors.ButtonHighlight;
-            b7.Location = new Point(12, 283);
+            b7.ForeColor = SystemColors.ActiveCaptionText;
+            b7.Location = new Point(10, 212);
+            b7.Margin = new Padding(3, 2, 3, 2);
             b7.Name = "b7";
-            b7.Size = new Size(63, 57);
+            b7.Size = new Size(55, 43);
             b7.TabIndex = 11;
             b7.Text = "7";
             b7.UseVisualStyleBackColor = false;
@@ -269,12 +285,13 @@
             // 
             // bEqual
             // 
-            bEqual.BackColor = Color.FromArgb(178, 178, 178);
+            bEqual.BackColor = Color.FromArgb(173, 241, 130);
             bEqual.FlatStyle = FlatStyle.Popup;
             bEqual.Font = new Font("Microsoft Sans Serif", 7.8F, FontStyle.Bold);
-            bEqual.Location = new Point(223, 368);
+            bEqual.Location = new Point(195, 276);
+            bEqual.Margin = new Padding(3, 2, 3, 2);
             bEqual.Name = "bEqual";
-            bEqual.Size = new Size(138, 57);
+            bEqual.Size = new Size(121, 43);
             bEqual.TabIndex = 19;
             bEqual.Text = "=";
             bEqual.UseVisualStyleBackColor = false;
@@ -282,13 +299,14 @@
             // 
             // bClear
             // 
-            bClear.BackColor = Color.FromArgb(64, 66, 88);
+            bClear.BackColor = Color.FromArgb(199, 251, 165);
             bClear.FlatStyle = FlatStyle.Popup;
             bClear.Font = new Font("Microsoft Sans Serif", 7.8F, FontStyle.Bold);
-            bClear.ForeColor = SystemColors.ButtonHighlight;
-            bClear.Location = new Point(154, 368);
+            bClear.ForeColor = SystemColors.ActiveCaptionText;
+            bClear.Location = new Point(135, 276);
+            bClear.Margin = new Padding(3, 2, 3, 2);
             bClear.Name = "bClear";
-            bClear.Size = new Size(63, 57);
+            bClear.Size = new Size(55, 43);
             bClear.TabIndex = 18;
             bClear.Text = "C";
             bClear.UseVisualStyleBackColor = false;
@@ -296,13 +314,14 @@
             // 
             // bDecimal
             // 
-            bDecimal.BackColor = Color.FromArgb(64, 66, 88);
+            bDecimal.BackColor = Color.FromArgb(199, 251, 165);
             bDecimal.FlatStyle = FlatStyle.Popup;
             bDecimal.Font = new Font("Microsoft Sans Serif", 7.8F, FontStyle.Bold);
-            bDecimal.ForeColor = SystemColors.ButtonHighlight;
-            bDecimal.Location = new Point(85, 368);
+            bDecimal.ForeColor = SystemColors.ActiveCaptionText;
+            bDecimal.Location = new Point(74, 276);
+            bDecimal.Margin = new Padding(3, 2, 3, 2);
             bDecimal.Name = "bDecimal";
-            bDecimal.Size = new Size(63, 57);
+            bDecimal.Size = new Size(55, 43);
             bDecimal.TabIndex = 17;
             bDecimal.Text = ".";
             bDecimal.UseVisualStyleBackColor = false;
@@ -310,13 +329,14 @@
             // 
             // b10
             // 
-            b10.BackColor = Color.FromArgb(64, 66, 88);
+            b10.BackColor = Color.FromArgb(199, 251, 165);
             b10.FlatStyle = FlatStyle.Popup;
             b10.Font = new Font("Microsoft Sans Serif", 7.8F, FontStyle.Bold);
-            b10.ForeColor = SystemColors.ButtonHighlight;
-            b10.Location = new Point(13, 368);
+            b10.ForeColor = SystemColors.ActiveCaptionText;
+            b10.Location = new Point(11, 276);
+            b10.Margin = new Padding(3, 2, 3, 2);
             b10.Name = "b10";
-            b10.Size = new Size(62, 57);
+            b10.Size = new Size(54, 43);
             b10.TabIndex = 16;
             b10.Text = "0";
             b10.UseVisualStyleBackColor = false;
@@ -324,11 +344,11 @@
             // 
             // Form1
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.FromArgb(36, 37, 48);
+            BackColor = Color.FromArgb(145, 108, 173);
             BackgroundImageLayout = ImageLayout.Zoom;
-            ClientSize = new Size(371, 450);
+            ClientSize = new Size(325, 338);
             Controls.Add(bEqual);
             Controls.Add(bClear);
             Controls.Add(bDecimal);
@@ -351,9 +371,14 @@
             Controls.Add(textDisplay);
             FormBorderStyle = FormBorderStyle.FixedSingle;
             Icon = (Icon)resources.GetObject("$this.Icon");
+            KeyPreview = true;
+            Margin = new Padding(3, 2, 3, 2);
             Name = "Form1";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Calculator";
+            Load += Form1_Load_1;
+            KeyDown += Form1_KeyDown;
+            KeyPress += Form1_KeyPress;
             ResumeLayout(false);
             PerformLayout();
         }
